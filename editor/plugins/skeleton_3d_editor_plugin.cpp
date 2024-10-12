@@ -933,6 +933,7 @@ void Skeleton3DEditor::update_joint_tree() {
 		items.insert(current_bone_idx, joint_item);
 
 		joint_item->set_text(0, skeleton->get_bone_name(current_bone_idx));
+		joint_item->set_tooltip_text(0, skeleton->get_bone_name(current_bone_idx) + " (id: " + itos(current_bone_idx) + ")");
 		joint_item->set_icon(0, bone_icon);
 		joint_item->set_selectable(0, true);
 		joint_item->set_metadata(0, "bones/" + itos(current_bone_idx));
